@@ -1,0 +1,45 @@
+/*
+ |----------------------------------------------------------------
+ | Footer
+ |----------------------------------------------------------------
+*/
+
+
+/*
+ |----------------------------------------------------------------
+ |  FnS - Crafted With Love
+ |----------------------------------------------------------------
+*/
+
+ #crafted-with-love {
+
+     a {
+         &:hover {
+             color: inherit; // Forge blue
+         }
+     }
+
+     .love {
+         position: relative;
+
+         &:before {
+             position: absolute;
+             z-index: 10;
+             bottom: 70%;
+             left: calc(100% - 6px);
+             content: "\f004";
+             @include font-awesome();
+             font-size: 8px;
+             color: #6cbdc4; // Forge blue
+             opacity: 0;
+             transition: bottom 0.3s ease 0.1s, opacity 0.25s ease;
+         }
+
+         &:hover {
+             &:before {
+                 bottom: 100%;
+                 opacity: 1;
+             }
+         }
+     }
+ }
