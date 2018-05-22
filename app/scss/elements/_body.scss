@@ -15,10 +15,16 @@ html {
     box-sizing: inherit;
 }
 
+html,
+body {
+    height: 100%;
+}
 
 body {
     @include main-font;
 	color: $maintext;
+    font-size: 17px;
+    line-height: 1.41;
 }
 
 ::selection {

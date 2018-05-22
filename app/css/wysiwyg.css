@@ -6,7 +6,7 @@
  *  Colors
 ================================================= */
 /**
- *  Text COlor
+ *  Text Color
 ================================================= */
 /**
  *  Text Sylte
@@ -62,14 +62,10 @@
  |  Gravityform
  |----------------------------------------------------------------
  */
+@import url("https://fonts.googleapis.com/css?family=Raleway|Playfair+Display:400,700");
 /*
  |----------------------------------------------------------------
  |  Font Faces
- |----------------------------------------------------------------
- */
-/*
- |----------------------------------------------------------------
- |  Button Base/Mixin
  |----------------------------------------------------------------
  */
 /* normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
@@ -453,160 +449,55 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
+html,
 body {
-  font-family: 'Open Sans', sans-serif;
-  color: #262626; }
+  height: 100%; }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color: #4A4A4A;
+  font-size: 17px;
+  line-height: 1.41; }
 
 ::selection {
-  background: #555;
+  background: #FFB7A8;
   color: white; }
 
 ::-moz-selection {
-  background: #555;
+  background: #FFB7A8;
   color: white; }
 
 @-ms-viewport {
   width: device-width; }
 
 /*
- |----------------------------------------------------------------
- |  Headings
- |----------------------------------------------------------------
- */
+|----------------------------------------------------------------
+|  Headings
+|----------------------------------------------------------------
+*/
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1.2;
   margin: 0;
-  padding-bottom: 25px;
-  font-weight: 400;
-  color: inherit; }
+  font-family: 'Playfair Display', serif;
+  line-height: 1.32; }
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     color: inherit;
     text-decoration: none; }
-  p + h1,
-  ul:not([class]) + h1,
-  ol:not([class]) + h1, p + h2,
-  ul:not([class]) + h2,
-  ol:not([class]) + h2, p + h3,
-  ul:not([class]) + h3,
-  ol:not([class]) + h3, p + h4,
-  ul:not([class]) + h4,
-  ol:not([class]) + h4, p + h5,
-  ul:not([class]) + h5,
-  ol:not([class]) + h5, p + h6,
-  ul:not([class]) + h6,
-  ol:not([class]) + h6 {
-    padding-top: 25px; }
 
 h1 {
-  font-size: calc(30px + (42 - 30) * (100vw - 320px) / (1200 - 320)); }
-  @media screen and (min-width: 1200px) {
-    h1 {
-      font-size: 42px; } }
+  font-size: 75px; }
 
-h2 {
-  font-size: calc(24px + (32 - 24) * (100vw - 320px) / (1200 - 320)); }
-  @media screen and (min-width: 1200px) {
-    h2 {
-      font-size: 32px; } }
+.section-heading {
+  font-size: 30px;
+  line-height: 1.33; }
+  .section-heading + .section-tagline {
+    margin-bottom: 60px; }
 
-h3 {
-  font-size: calc(20px + (24 - 20) * (100vw - 320px) / (1200 - 320)); }
-  @media screen and (min-width: 1200px) {
-    h3 {
-      font-size: 24px; } }
-
-h4 {
-  font-size: calc(18px + (20 - 18) * (100vw - 320px) / (1200 - 320)); }
-  @media screen and (min-width: 1200px) {
-    h4 {
-      font-size: 20px; } }
-
-h5 {
-  font-size: calc(16px + (18 - 16) * (100vw - 320px) / (1200 - 320)); }
-  @media screen and (min-width: 1200px) {
-    h5 {
-      font-size: 18px; } }
-
-h6 {
-  font-size: calc(14px + (14 - 14) * (100vw - 320px) / (1200 - 320)); }
-  @media screen and (min-width: 1200px) {
-    h6 {
-      font-size: 14px; } }
-
-/*
- |----------------------------------------------------------------
- |  Paragraph
- |----------------------------------------------------------------
- */
-p {
-  margin: 0;
-  padding-bottom: 25px;
-  font-size: calc(16px + (18 - 16) * (100vw - 320px) / (1200 - 320));
-  line-height: 1.8;
-  color: inherit; }
-  @media screen and (min-width: 1200px) {
-    p {
-      font-size: 18px; } }
-  p:empty {
-    display: none; }
-
-.intro {
-  font-size: calc(20px + (22 - 20) * (100vw - 320px) / (1200 - 320)); }
-  @media screen and (min-width: 1200px) {
-    .intro {
-      font-size: 22px; } }
-
-/*
- |----------------------------------------------------------------
- |  Horizontal Line
- |----------------------------------------------------------------
- */
-hr {
-  border: none;
-  border-bottom: 1px solid #555;
-  width: 90%;
-  margin: 10px auto 35px; }
-
-/*
- |----------------------------------------------------------------
- |  MISC
- |----------------------------------------------------------------
- */
-i, em {
-  font-style: italic; }
-
-b, strong {
-  font-weight: 700; }
-
-/*
- |----------------------------------------------------------------
- | Address
- |----------------------------------------------------------------
- */
-address {
-  font-style: normal; }
-
-/*
- |----------------------------------------------------------------
- | Code
- |----------------------------------------------------------------
- */
-code, pre {
-  background-color: #ededed;
-  font-family: "Consolas", monospace;
-  font-size: calc(14px + (14 - 14) * (100vw - 320px) / (1200 - 320)); }
-  @media screen and (min-width: 1200px) {
-    code, pre {
-      font-size: 14px; } }
-
-pre {
-  padding: 25px 20px; }
-
-code {
-  border-radius: 3px;
-  vertical-align: middle;
-  white-space: nowrap;
-  padding: 2px 5px; }
+.section-tagline {
+  font-family: 'Raleway', sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.28; }
 
 /*
  |----------------------------------------------------------------
@@ -630,7 +521,7 @@ ol:not([class]) {
         font-size: 18px; } }
     ul:not([class]) li:before,
     ol:not([class]) li:before {
-      color: #555;
+      color: #FFB7A8;
       position: absolute;
       left: -25px; }
   ul:not([class]) ul:not([class]),
@@ -645,7 +536,7 @@ ul:not([class]) li:before {
   content: "●";
   font-size: calc(16px + (16 - 16) * (100vw - 320px) / (1200 - 320));
   top: calc(0px + (3 - 0) * (100vw - 320px) / (1200 - 320));
-  color: #555; }
+  color: #FFB7A8; }
   @media screen and (min-width: 1200px) {
     ul:not([class]) li:before {
       font-size: 16px; } }
@@ -659,7 +550,7 @@ ol:not([class]) {
     content: counter(my-counter) ".";
     counter-increment: my-counter;
     top: 1px;
-    color: #555;
+    color: #BBBBBB;
     font-size: calc(16px + (16 - 16) * (100vw - 320px) / (1200 - 320));
     font-weight: bold; }
     @media screen and (min-width: 1200px) {
@@ -675,13 +566,13 @@ a {
   transition-duration: 250ms;
   transition-property: background-color, color, border, opacity, text-indent;
   text-decoration: none;
-  color: #555; }
+  color: #FFB7A8; }
   a:hover, a:focus, a:active {
     text-decoration: none; }
   p a,
   ul:not([class]) a,
   ol:not([class]) a {
-    border-bottom: 2px solid #ededed;
+    border-bottom: 2px solid #DFDFDF;
     opacity: 1; }
     p a:hover,
     ul:not([class]) a:hover,
@@ -747,7 +638,7 @@ img {
 .wp-caption-dd,
 .wp-caption-text {
   padding: 10px 15px !important;
-  background: #555;
+  background: #FFB7A8;
   color: white; }
 
 /*
@@ -785,7 +676,7 @@ img {
  |----------------------------------------------------------------
  */
 blockquote {
-  border-left: 5px solid #555;
+  border-left: 5px solid #FFB7A8;
   padding: 20px 20px 20px 50px;
   margin: 20px 0 35px; }
   blockquote p:last-of-type:not(:first-of-type) {
@@ -808,31 +699,17 @@ blockquote {
  |----------------------------------------------------------------
  */
 .button {
-  transition-duration: .2s;
-  transition-property: background-color, color, border, opacity;
+  min-width: 150px;
   display: inline-flex;
-  align-items: center;
   justify-content: center;
-  border: 2px solid transparent;
-  padding: 12px 25px;
-  border-radius: 0;
-  min-width: 180px;
-  min-height: 50px;
-  cursor: pointer;
-  position: relative;
-  font-size: calc(16px + (18 - 16) * (100vw - 320px) / (1200 - 320));
-  letter-spacing: 0.1em;
-  font-weight: 400;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: none;
+  align-items: center;
+  padding: 5px 20px;
   outline: none;
-  color: #262626; }
-  @media screen and (min-width: 1200px) {
-    .button {
-      font-size: 18px; } }
-  .button.default {
-    background-color: #555; }
+  border: 2px solid #4A4A4A;
+  border-radius: 22px;
+  font-size: 21px;
+  font-weight: 600;
+  color: #4A4A4A; }
 
 /** Something only in wysiwyg */
 body {

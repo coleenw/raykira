@@ -8,21 +8,22 @@ $imgfolder : unquote("../../images");
 /**
  *  Colors
 ================================================= */
-$black      : #262626;
+$black      : #4A4A4A;
 $white      : #ffffff;
-$grey       : #555;
-$light-grey : #ededed;
+$grey       : #BBBBBB;
+$light-grey : #DFDFDF;
+$pink		: #FFB7A8;
 
 // form validation
 $red        : #b0161d;
 $green      : #88B04B;
 
 /**
- *  Text COlor
+ *  Text Color
 ================================================= */
 $maintext  : $black;
-$highlight : $grey;
-$border    : $light-grey;
+$highlight : $pink;
+$border    : $black;
 
 /**
  *  Text Sylte

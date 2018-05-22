@@ -1,5 +1,136 @@
-/*
- |----------------------------------------------------------------
- |  Banner
- |----------------------------------------------------------------
- */
+section {
+	padding: 80px 0 106px 0;
+}
+
+// === ABOUT US ===
+
+#about-us {
+	background: linear-gradient(180deg, #FFFFFF 0%, #E0E0E0 100%);
+}
+
+.bio {
+	@include margin-top(91, 30);
+	padding: 0 23px;
+
+	.bio-name {
+		margin-bottom: 20px;
+		@include heading-style();
+		font-size: 40px;
+		line-height: 1.325;
+	}
+
+	&.bio-kira {
+		text-align: right;
+	}
+}
+
+.decorative-amp {
+	@include margin-top(91, 30);
+	@include heading-style();
+	font-size: 170px;
+	line-height: 1.36;
+	color: $light-grey;
+}
+
+// === EVENT DETAILS ===
+
+#event {
+	background-repeat: no-repeat;
+	background-position: right calc(100% + 500px);
+	background-size: cover;
+
+	@include overlay();
+
+	&:before {
+		background-color: rgba($white ,0.4);
+	}
+}
+
+.event-details {
+	margin: 0 auto;
+
+	th, td {
+		vertical-align: top;
+		padding-bottom: 35px;
+	}
+
+	th {
+		padding-right: 30px;
+		text-align: right;
+		font-weight: normal;
+		font-size: 20px;
+	}
+
+	td {
+		max-width: 271px;
+		text-align: left;
+	}
+}
+
+// === FRIENDS ===
+
+#friends {
+	padding-bottom: 0;
+
+	.friends {
+		@include margin-bottom(90, 50);
+	}
+
+	.friend {
+		font-size: 18px;
+		line-height: 1;
+
+		.friend-thumb {
+			margin-bottom: 19px;
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+
+		.friend-name {
+			margin-bottom: 5px;
+		}
+
+		.friend-title {
+			font-weight: $bold;
+			font-size: 16px;
+		}
+	}
+
+	.friend-featured {
+		display: inline-block;
+		margin: 45px auto 35px auto;
+
+		.friend {
+			font-size: 20px;
+
+			.friend-thumb {
+				width: 172px;
+				height: 172px;
+			}
+		}
+	}
+}
+
+// === RSVP ===
+
+#rsvp {
+	padding-top: 0;
+}
+
+.rsvp-form-container {
+	@include padding-top(90, 50);
+	border-top: 1px solid $maintext;
+}
+
+// ==== DINING ===
+
+// #dining {
+// 	background-color: $pink;
+
+// 	.menu-choices {
+// 		margin-top: 60px;
+// 	}
+// }
+

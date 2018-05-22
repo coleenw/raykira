@@ -21,13 +21,13 @@
 
     <body>
 
-        <header style="background-image:url('https://images.unsplash.com/photo-1492661654951-85b172b2feb3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=255940d3309dfedd9cf65b18e29ddf7a&auto=format&fit=crop&w=1103&q=80');">
+        <header style="background-image:url('images/header_bg.jpg');">
             
             <nav>
-                <div class="row">
+                <div class="row row-middle">
                     <div class="columns-3">
                         <a href="#" id="logo">
-                            <img src="http://placehold.it/200x100" alt="">
+                            Ray + Kira
                         </a>
                     </div>
                     <div class="columns-9">
@@ -52,11 +52,9 @@
                 </div>
             </nav>
 
-            <div class="row">
-                <div class="columns-12 column-center text-center">
-                    <div class="header-content">
-                        <h1>Ray + Kira</h1>
-                    </div>
+            <div class="row row-middle row-center header-content">
+                <div class="columns-12 text-center">
+                    <h1>Ray + Kira</h1>
                 </div>
             </div>
 
@@ -69,8 +67,8 @@
                 </div>
             </div>
             <div class="row row-center">
-                <div class="columns-5">
-                    <div class="bio">
+                <div class="columns-4">
+                    <div class="bio bio-ray">
                         <div class="bio-name">Ray Lam</div>
                         <div class="bio-desc">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. At iste quam quis non, possimus debitis eaque molestias aut optio vitae natus minima dolore nobis sint voluptatibus, velit vero dicta delectus totam provident eligendi sequi beatae. Dignissimos qui natus voluptatibus quo.
@@ -78,10 +76,10 @@
                     </div>
                 </div>
                 <div class="columns-2">
-                    &amp;
+                    <div class="decorative-amp">&amp;</div>
                 </div>
-                <div class="columns-5">
-                    <div class="bio">
+                <div class="columns-4">
+                    <div class="bio bio-kira">
                         <div class="bio-name">Kira Choi</div>
                         <div class="bio-desc">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat omnis enim neque tenetur voluptatum facilis adipisci provident dicta, molestias? Accusamus nihil ratione ab, delectus beatae odio et amet expedita commodi! Provident suscipit in, eius commodi explicabo, dolor optio repellendus facilis accusamus quam rem ea vel.
@@ -91,47 +89,50 @@
             </div>
         </section>
 
-        <section id="event">
+        <section id="event" style="background-image:url('images/venue_bg.jpg');">
             <div class="row row-center">
                 <div class="columns-12 text-center">
                     <h2 class="section-heading">Vancouver Club</h2>
                     <h3 class="section-tagline">915 West Hastings Street</h3>
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="columns-5">
-                    Ceremony
+                    <table class="event-details">
+                        <tr>
+                            <th>Ceremony</th>
+                            <td>
+                                3pm, room number here
+                                A successful marketing plan relies heavily 
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Cocktail Hour</th>
+                            <td>
+                                3pm, room number here
+                                A successful marketing plan relies heavily 
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Reception</th>
+                            <td>
+                                3pm, room number here
+                                A successful marketing plan relies heavily 
+                            </td>
+                        </tr>
+                    </table>
                 </div>
-                <div class="columns-7">
-                    3pm, information
-                </div>
-                <div class="columns-5">
-                    Ceremony
-                </div>
-                <div class="columns-7">
-                    3pm, information
-                </div>
-                <div class="columns-5">
-                    Ceremony
-                </div>
-                <div class="columns-7">
-                    3pm, information
-                </div>
-
                 <div class="columns-12 text-center">
                     <a href="#" class="button">directions</a>
                 </div>
             </div>
+
         </section>
 
-        <section id="dining">
+        <!-- <section id="dining">
             <div class="row text-center">
                 <div class="columns-12">
                     <h2 class="section-heading">Dining</h2>
                 </div>
                 <div class="columns-12">
-                    <ul class="menu-choices block-grid-3">
+                    <ul class="menu-choices block-grid-3 block-grid-stretch">
                         <li>
                             <div class="menu-choice-name">Standard</div>
                             <p>
@@ -180,13 +181,27 @@
                     </ul>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section id="friends">
             <div class="row">
-                <div class="columns-12">
+                <div class="columns-12 text-center">
                     <h2 class="section-heading">Friends</h2>
-                    <ul class="friends block-grid-5">
+
+                    <div class="friend-featured">
+                        <div class="friend">
+                            <div class="friend-thumb">
+                                <img src="https://images.unsplash.com/photo-1497551060073-4c5ab6435f12?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c0bebe40d57258868aa633e15197f07&auto=format&fit=crop&w=667&q=80" alt="">
+                            </div>
+                            <div class="friend-name">
+                                John Doe
+                            </div>
+                            <div class="friend-title">
+                                Groomsman
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="friends block-grid-5 block-grid-center">
                         <li>
                             <div class="friend">
                                 <div class="friend-thumb">
@@ -252,6 +267,22 @@
                                 </div>
                             </div>
                         </li>
+                    </ul>
+
+                    <div class="friend-featured">
+                        <div class="friend">
+                            <div class="friend-thumb">
+                                <img src="https://images.unsplash.com/photo-1497551060073-4c5ab6435f12?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c0bebe40d57258868aa633e15197f07&auto=format&fit=crop&w=667&q=80" alt="">
+                            </div>
+                            <div class="friend-name">
+                                John Doe
+                            </div>
+                            <div class="friend-title">
+                                Groomsman
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="friends block-grid-5 block-grid-center">
                         <li>
                             <div class="friend">
                                 <div class="friend-thumb">
@@ -323,14 +354,16 @@
         </section>
 
         <section id="rsvp">
-            <div class="row">
-                <div class="columns-12 text-center">
-                    <h2 class="section-heading">RSVP</h2>
-                    <h3 class="section-tagline">Kindly reply before date here</h3>
+            <div class="row row-center">
+                <div class="columns-8 text-center">
+                    <div class="rsvp-form-container">
+                        <h2 class="section-heading">RSVP</h2>
+                        <h3 class="section-tagline">Kindly reply before date here</h3>
 
-                    <form action="">
-                        FORM
-                    </form>
+                        <form action="">
+                            FORM
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>

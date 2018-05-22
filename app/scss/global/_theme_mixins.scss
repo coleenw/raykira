@@ -1,47 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Playfair+Display:400,700');
+
 /*
  |----------------------------------------------------------------
  |  Font Faces
  |----------------------------------------------------------------
  */
+
 @mixin sans() {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+@mixin serif() {
+    font-family: 'Playfair Display', serif;
 }
 
 @mixin main-font() {
     @include sans;
 }
 
-/*
- |----------------------------------------------------------------
- |  Button Base/Mixin
- |----------------------------------------------------------------
- */
-@mixin button() {
-    transition-duration: .2s;
-    transition-property: background-color, color, border, opacity;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid transparent;
-    padding: 12px 25px;
-    border-radius: 0;
-    min-width: 180px;
-    min-height: 50px;
-    cursor: pointer;
-    position: relative;
-
-    @include font-size(18, 16);
-    @include letter-spacing(100);
-    font-weight: $normal;
-    text-align: center;
-    text-decoration: none;
-    text-shadow: none;
-    outline: none;
-    color: $maintext;
+@mixin heading-style() {
+    @include serif();
+    font-weight: $bold;
 }
 
-@mixin button-style($style: 'default') {
-    @if $style == 'default' {
-        background-color: $highlight;
-    }
+@mixin button() {
+	min-width: 150px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    outline: none;
+    border: 2px solid $maintext;
+    border-radius: 22px;
+    font-size: 21px;
+    font-weight: $semi;
+	color: $maintext;
+}
+
+@mixin overlay() {
+	position: relative;
+
+	&:before {
+	    content: ' ';
+	    display: block;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    z-index: 1;
+	}
+
+	> * {
+	    position: relative;
+	    z-index: 2;
+	}
 }

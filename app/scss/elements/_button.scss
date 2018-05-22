@@ -5,9 +5,5 @@
  */
 .button {
     @include button();
-
-    &.default {
-        @include button-style('default');
-    }
 }
 
