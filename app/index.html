@@ -33,19 +33,19 @@
                     <div class="columns-9">
                         <ul class="main-menu">
                             <li>
-                                <a href="#">About Us</a>
+                                <a href="#" data-scroll-to="about-us">About Us</a>
                             </li>
                             <li>
-                                <a href="#">Event</a>
+                                <a href="#" data-scroll-to="event">Event</a>
+                            </li>
+                            <!-- <li>
+                                <a href="#" data-scroll-to="dining">Dining</a>
+                            </li> -->
+                            <li>
+                                <a href="#" data-scroll-to="friends">Friends</a>
                             </li>
                             <li>
-                                <a href="#">Dining</a>
-                            </li>
-                            <li>
-                                <a href="#">Friends</a>
-                            </li>
-                            <li>
-                                <a href="#">RSVP</a>
+                                <a href="#" data-scroll-to="rsvp">RSVP</a>
                             </li>
                         </ul> 
                     </div>
@@ -383,6 +383,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script> -->
     <script src="js/scripts.js"></script>
+
+    <script>
+    $('[data-scroll-to]').on('click', function(event) {
+        event.preventDefault();
+        var target = $('#' + $(this).data('scroll-to'));
+
+        console.log(target);
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    });
+    </script>
     <!-- endbuild -->
     </body>
 

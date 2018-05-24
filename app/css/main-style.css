@@ -1273,37 +1273,15 @@ header {
  |----------------------------------------------------------------
  */
 /*
- |----------------------------------------------------------------
- | Footer
- |----------------------------------------------------------------
+|----------------------------------------------------------------
+| Footer
+|----------------------------------------------------------------
 */
-/*
- |----------------------------------------------------------------
- |  FnS - Crafted With Love
- |----------------------------------------------------------------
-*/
-#crafted-with-love a:hover {
-  color: inherit; }
-
-#crafted-with-love .love {
-  position: relative; }
-  #crafted-with-love .love:before {
-    position: absolute;
-    z-index: 10;
-    bottom: 70%;
-    left: calc(100% - 6px);
-    content: "\f004";
-    font-family: "Font Awesome 5 Solid";
-    text-rendering: auto;
-    font-smoothing: antialiased;
-    display: none;
-    font-size: 8px;
-    color: #6cbdc4;
-    opacity: 0;
-    transition: bottom 0.3s ease 0.1s, opacity 0.25s ease; }
-  #crafted-with-love .love:hover:before {
-    bottom: 100%;
-    opacity: 1; }
+footer {
+  padding: 12px;
+  background: #FFB7A8;
+  font-size: 16px;
+  line-height: 1.625; }
 
 /*
  |----------------------------------------------------------------
