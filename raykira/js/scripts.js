@@ -1,1 +1,1 @@
-// this.navItems = Array.from(document.)
+$("[data-scroll-to]").on("click",function(o){o.preventDefault();var t=$("#"+$(this).data("scroll-to"));console.log(t),$("html, body").stop().animate({scrollTop:t.offset().top},1e3)});

@@ -1,9 +1,12 @@
 		<footer>
-			Thanks for taking the time to visit our wedding website! We hope to see you on our big day!<br />
-			Please contact Coleen or RD if you have any questions!
+		    <div class="row">
+		        <div class="columns-12 text-center">
+		            &copy; Ray + Kira <?php echo date('Y'); ?>
+		        </div>
+		    </div>
 		</footer>
 
-	<?php wp_footer(); /* this is used by many Wordpress features and plugins to work proporly */ ?>
+	<?php wp_footer(); ?>
 
 </body>
 </html>
