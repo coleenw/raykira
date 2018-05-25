@@ -35,6 +35,12 @@
     font-size: 21px;
     font-weight: $semi;
 	color: $maintext;
+	transition: all 0.3s ease;
+
+	&:hover {
+		border-color: $pink;
+		color: $pink;
+	}
 }
 
 @mixin overlay() {

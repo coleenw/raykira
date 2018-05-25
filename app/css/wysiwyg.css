@@ -709,7 +709,11 @@ blockquote {
   border-radius: 22px;
   font-size: 21px;
   font-weight: 600;
-  color: #4A4A4A; }
+  color: #4A4A4A;
+  transition: all 0.3s ease; }
+  .button:hover {
+    border-color: #FFB7A8;
+    color: #FFB7A8; }
 
 /** Something only in wysiwyg */
 body {

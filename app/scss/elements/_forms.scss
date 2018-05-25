@@ -1,0 +1,61 @@
+form {
+
+	[type="text"],
+	[type="email"] {
+		outline: none;
+		border: 0;
+		border-bottom: 1px solid $maintext;
+		transition: border 0.3s ease;
+
+		&:focus {
+			border-color: $pink;
+		}
+	}
+
+	[type="submit"],
+	button {
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+}
+
+.gfield {
+	display: flex;
+	justify-content: space-between;
+
+	.gfield_label {
+		width: 45%;
+		text-align: left;
+	}
+
+	.ginput_container {
+		width: 58%;
+		margin-bottom: 35px;
+
+		[type="text"],
+		[type="email"] {
+			width: 100%;
+		}
+
+		.gfield_radio {
+			@include list-reset();
+			margin-bottom: 10px;
+			display: flex;
+			flex-flow: column nowrap;
+			align-items: flex-start;
+
+			label {
+				margin-left: 10px;
+			}
+		}
+	}
+}
+
+.gform_footer {
+	margin-top: 35px;
+	text-align: center;
+	justify-content: center;
+}

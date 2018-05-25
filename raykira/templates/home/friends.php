@@ -6,164 +6,81 @@
             <div class="friend-featured">
                 <div class="friend">
                     <div class="friend-thumb">
-                        <img src="https://images.unsplash.com/photo-1497551060073-4c5ab6435f12?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c0bebe40d57258868aa633e15197f07&auto=format&fit=crop&w=667&q=80" alt="">
+                        <?php $maid_of_honor = get_field('maid_of_honor_photo'); ?>
+                        <img src="<?php echo $maid_of_honor['sizes']['bridal_party']; ?>" alt="">
                     </div>
                     <div class="friend-name">
-                        John Doe
+                        <?php the_field('maid_of_honor_name'); ?>
                     </div>
                     <div class="friend-title">
-                        Groomsman
+                        Maid of Honor
                     </div>
                 </div>
             </div>
-            <ul class="friends block-grid-5 block-grid-center">
-                <li>
-                    <div class="friend">
-                        <div class="friend-thumb">
-                            <img src="https://images.unsplash.com/photo-1497551060073-4c5ab6435f12?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c0bebe40d57258868aa633e15197f07&auto=format&fit=crop&w=667&q=80" alt="">
-                        </div>
-                        <div class="friend-name">
-                            Janet Smith
-                        </div>
-                        <div class="friend-title">
-                            Bridesmaid
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="friend">
-                        <div class="friend-thumb">
-                            <img src="https://images.unsplash.com/photo-1497551060073-4c5ab6435f12?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c0bebe40d57258868aa633e15197f07&auto=format&fit=crop&w=667&q=80" alt="">
-                        </div>
-                        <div class="friend-name">
-                            Janet Smith
-                        </div>
-                        <div class="friend-title">
-                            Bridesmaid
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="friend">
-                        <div class="friend-thumb">
-                            <img src="https://images.unsplash.com/photo-1497551060073-4c5ab6435f12?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c0bebe40d57258868aa633e15197f07&auto=format&fit=crop&w=667&q=80" alt="">
-                        </div>
-                        <div class="friend-name">
-                            Janet Smith
-                        </div>
-                        <div class="friend-title">
-                            Maid of Honor
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="friend">
-                        <div class="friend-thumb">
-                            <img src="https://images.unsplash.com/photo-1497551060073-4c5ab6435f12?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c0bebe40d57258868aa633e15197f07&auto=format&fit=crop&w=667&q=80" alt="">
-                        </div>
-                        <div class="friend-name">
-                            Janet Smith
-                        </div>
-                        <div class="friend-title">
-                            Bridesmaid
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="friend">
-                        <div class="friend-thumb">
-                            <img src="https://images.unsplash.com/photo-1497551060073-4c5ab6435f12?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c0bebe40d57258868aa633e15197f07&auto=format&fit=crop&w=667&q=80" alt="">
-                        </div>
-                        <div class="friend-name">
-                            Janet Smith
-                        </div>
-                        <div class="friend-title">
-                            Bridesmaid
-                        </div>
-                    </div>
-                </li>
-            </ul>
+
+            <?php if(have_rows('bridesmaids')): ?>
+
+                <ul class="friends block-grid-5 block-grid-center">
+
+                    <?php while(have_rows('bridesmaids')): the_row(); ?>
+                        <li>
+                            <div class="friend">
+                                <div class="friend-thumb">
+                                    <?php $person = get_sub_field('bridesmaid_photo'); ?>
+                                    <img src="<?php echo $person['sizes']['bridal_party']; ?>" alt="">
+                                </div>
+                                <div class="friend-name">
+                                    <?php the_sub_field('bridesmaid_name'); ?>
+                                </div>
+                                <div class="friend-title">
+                                    Bridesmaid
+                                </div>
+                            </div>
+                        </li>
+                    <?php endwhile; ?>
+                </ul>
+
+            <?php endif; ?>
 
             <div class="friend-featured">
                 <div class="friend">
                     <div class="friend-thumb">
-                        <img src="https://images.unsplash.com/photo-1497551060073-4c5ab6435f12?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c0bebe40d57258868aa633e15197f07&auto=format&fit=crop&w=667&q=80" alt="">
+                        <?php $best_man = get_field('best_man_photo'); ?>
+                        <img src="<?php echo $best_man['sizes']['bridal_party']; ?>" alt="">
                     </div>
                     <div class="friend-name">
-                        John Doe
+                        <?php the_field('best_man_name'); ?>
                     </div>
                     <div class="friend-title">
-                        Groomsman
+                        Best Man
                     </div>
                 </div>
             </div>
-            <ul class="friends block-grid-5 block-grid-center">
-                <li>
-                    <div class="friend">
-                        <div class="friend-thumb">
-                            <img src="https://images.unsplash.com/photo-1497551060073-4c5ab6435f12?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c0bebe40d57258868aa633e15197f07&auto=format&fit=crop&w=667&q=80" alt="">
-                        </div>
-                        <div class="friend-name">
-                            John Doe
-                        </div>
-                        <div class="friend-title">
-                            Groomsman
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="friend">
-                        <div class="friend-thumb">
-                            <img src="https://images.unsplash.com/photo-1497551060073-4c5ab6435f12?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c0bebe40d57258868aa633e15197f07&auto=format&fit=crop&w=667&q=80" alt="">
-                        </div>
-                        <div class="friend-name">
-                            John Doe
-                        </div>
-                        <div class="friend-title">
-                            Groomsman
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="friend">
-                        <div class="friend-thumb">
-                            <img src="https://images.unsplash.com/photo-1497551060073-4c5ab6435f12?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c0bebe40d57258868aa633e15197f07&auto=format&fit=crop&w=667&q=80" alt="">
-                        </div>
-                        <div class="friend-name">
-                            John Doe
-                        </div>
-                        <div class="friend-title">
-                            Groomsman
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="friend">
-                        <div class="friend-thumb">
-                            <img src="https://images.unsplash.com/photo-1497551060073-4c5ab6435f12?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c0bebe40d57258868aa633e15197f07&auto=format&fit=crop&w=667&q=80" alt="">
-                        </div>
-                        <div class="friend-name">
-                            John Doe
-                        </div>
-                        <div class="friend-title">
-                            Groomsman
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="friend">
-                        <div class="friend-thumb">
-                            <img src="https://images.unsplash.com/photo-1497551060073-4c5ab6435f12?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c0bebe40d57258868aa633e15197f07&auto=format&fit=crop&w=667&q=80" alt="">
-                        </div>
-                        <div class="friend-name">
-                            John Doe
-                        </div>
-                        <div class="friend-title">
-                            Groomsman
-                        </div>
-                    </div>
-                </li>
-            </ul>
+
+            <?php if(have_rows('groomsmen')): ?>
+
+                <ul class="friends block-grid-5 block-grid-center">
+
+                    <?php while(have_rows('groomsmen')): the_row(); ?>
+                        <li>
+                            <div class="friend">
+                                <div class="friend-thumb">
+                                    <?php $person = get_sub_field('groomsman_photo'); ?>
+                                    <img src="<?php echo $person['sizes']['bridal_party']; ?>" alt="">
+                                </div>
+                                <div class="friend-name">
+                                    <?php the_sub_field('groomsman_name'); ?>
+                                </div>
+                                <div class="friend-title">
+                                    Groomsman
+                                </div>
+                            </div>
+                        </li>
+                    <?php endwhile; ?>
+                </ul>
+
+            <?php endif; ?>
+
         </div>
     </div>
 </section>

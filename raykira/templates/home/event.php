@@ -1,36 +1,32 @@
 <section id="event" style="background-image:url('<?php echo get_template_directory_uri(); ?>/images/venue_bg.jpg');">
     <div class="row row-center">
         <div class="columns-12 text-center">
-            <h2 class="section-heading">Vancouver Club</h2>
-            <h3 class="section-tagline">915 West Hastings Street</h3>
+            <h2 class="section-heading"><?php the_field('event_section_title'); ?></h2>
+            <h3 class="section-tagline"><?php the_field('event_section_address'); ?></h3>
+    
+            <?php if(have_rows('event_details')): ?>
+                <table class="event-details">
 
-            <table class="event-details">
-                <tr>
-                    <th>Ceremony</th>
-                    <td>
-                        3pm, room number here
-                        A successful marketing plan relies heavily 
-                    </td>
-                </tr>
-                <tr>
-                    <th>Cocktail Hour</th>
-                    <td>
-                        3pm, room number here
-                        A successful marketing plan relies heavily 
-                    </td>
-                </tr>
-                <tr>
-                    <th>Reception</th>
-                    <td>
-                        3pm, room number here
-                        A successful marketing plan relies heavily 
-                    </td>
-                </tr>
-            </table>
+                    <?php while(have_rows('event_details')): the_row(); ?>
+                        <tr>
+                            <th><?php the_sub_field('detail_label'); ?></th>
+                            <td>
+                                <?php the_sub_field('detail_info'); ?>
+                            </td>
+                        </tr>
+                    <?php endwhile; ?>
+
+                </table>
+            <?php endif; ?>
+
         </div>
-        <div class="columns-12 text-center">
-            <a href="#" class="button">directions</a>
-        </div>
+
+        <?php if(get_field('google_directions')): ?>
+            <div class="columns-12 text-center">
+                <a href="<?php the_field('google_directions'); ?>" class="button" target="_blank">directions</a>
+            </div>
+        <?php endif; ?>
+
     </div>
 
 </section>
