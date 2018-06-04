@@ -25,4 +25,16 @@ add_action( 'wp_enqueue_scripts', 'theme_style' );
 add_action( 'wp_enqueue_scripts', 'theme_jquery' );
 
 
+function section_bg($acf_field) {
+	if(get_field($acf_field)) {
+		$acf = get_field($acf_field);
+		$bg_url = $acf['url'];
+	}
+	else {
+		$bg_url = get_template_directory_uri().'/images/header_bg.jpg';
+	}
+
+	echo 'style="background-image:url(\''.$bg_url.'\');"';
+}
+
 ?>

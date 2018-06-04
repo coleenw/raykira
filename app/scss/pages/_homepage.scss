@@ -36,7 +36,8 @@ section {
 
 #event {
 	background-repeat: no-repeat;
-	background-position: right calc(100% + 500px);
+	// background-position: right calc(100% + 500px);
+	background-position: center;
 	background-size: cover;
 
 	@include overlay();

@@ -1,4 +1,4 @@
-<section id="event" style="background-image:url('<?php echo get_template_directory_uri(); ?>/images/venue_bg.jpg');">
+<section id="event" <?php section_bg('event_section_background'); ?>>
     <div class="row row-center">
         <div class="columns-12 text-center">
             <h2 class="section-heading"><?php the_field('event_section_title'); ?></h2>

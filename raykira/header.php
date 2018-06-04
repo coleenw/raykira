@@ -12,7 +12,7 @@
 </head>	
 <body <?php body_class(); ?>>
 			
-	<header style="background-image:url('<?php echo get_template_directory_uri(); ?>/images/header_bg.jpg');">
+	<header <?php section_bg('header_section_background'); ?>>
 	    
 	    <nav>
 	        <div class="row row-middle">
