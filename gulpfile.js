@@ -50,7 +50,7 @@ function compress() {
 function compressCSSToTheme() {
     return gulp.src(paths.styles.dest + '/**/*.css')
     .pipe(gulpIf('*.css', cssnano()))
-    .pipe(gulp.dest(projectFoldere + '/styles/css'))
+    .pipe(gulp.dest(projectFoldere + '/styles/'))
 }
 
 function compressJSToTheme() {
