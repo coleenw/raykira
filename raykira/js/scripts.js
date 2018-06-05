@@ -1,1 +1,1 @@
-$("[data-scroll-to]").on("click",function(o){o.preventDefault();var t=$("#"+$(this).data("scroll-to"));console.log(t),$("html, body").stop().animate({scrollTop:t.offset().top},1e3)});
+$("[data-scroll-to]").on("click",function(o){o.preventDefault();var t=$("#"+$(this).data("scroll-to"));console.log(t),$("html, body").stop().animate({scrollTop:t.offset().top},1e3)}),$(window).scroll(function(){$("section").each(function(){var o=$(this),t=o.offset().top,l=o.outerHeight();$(window).scrollTop()>t-400&&$(window).scrollTop()<t+l?o.addClass("show"):o.removeClass("show")})});
