@@ -14,7 +14,7 @@ function theme_style() {
 	wp_register_script('themescript', get_template_directory_uri() . '/js/scripts.js', array(), '', true);
 	wp_enqueue_script('themescript');
 	wp_enqueue_style( 'theme_info', get_stylesheet_uri() );
-	wp_enqueue_style( 'theme_main_styles', get_template_directory_uri().'/styles/css/main-style.css' );
+	wp_enqueue_style( 'theme_main_styles', get_template_directory_uri().'/styles/main-style.css' );
 }
 
 function theme_jquery() {

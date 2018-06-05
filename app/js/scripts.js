@@ -7,3 +7,23 @@ $('[data-scroll-to]').on('click', function(event) {
         scrollTop: target.offset().top
     }, 1000);
 });
+
+$(window).scroll(function(){
+
+    $('section').each(function(){
+
+        var currentSection = $(this);
+
+        var topofDiv = currentSection.offset().top;
+        var height = currentSection.outerHeight();
+
+        if($(window).scrollTop() > (topofDiv - 400) && $(window).scrollTop() < (topofDiv + height)){
+           currentSection.addClass('show');
+        }
+        else{
+           currentSection.removeClass('show');
+        }
+
+    });
+
+});

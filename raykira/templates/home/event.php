@@ -2,7 +2,7 @@
     <div class="row row-center">
         <div class="columns-12 text-center">
             <h2 class="section-heading"><?php the_field('event_section_title'); ?></h2>
-            <h3 class="section-tagline"><?php the_field('event_section_address'); ?></h3>
+            <h3 class="section-tagline"><?php the_field('event_address'); ?></h3>
     
             <?php if(have_rows('event_details')): ?>
                 <table class="event-details">

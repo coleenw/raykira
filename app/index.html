@@ -71,7 +71,12 @@
                     <div class="bio text-center">
                         <!-- <div class="bio-name">Ray Lam &amp; Kira Choi</div> -->
                         <div class="bio-desc">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At iste quam quis non, possimus debitis eaque molestias aut optio vitae natus minima dolore nobis sint voluptatibus, velit vero dicta delectus totam provident eligendi sequi beatae. Dignissimos qui natus voluptatibus quo.
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. At iste quam quis non, possimus debitis eaque molestias aut optio vitae natus minima dolore nobis sint voluptatibus, velit vero dicta delectus totam provident eligendi sequi beatae. Dignissimos qui natus voluptatibus quo.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga voluptatem facilis fugit natus quasi exercitationem, incidunt illum, possimus, quae ab tenetur, sunt illo voluptatibus explicabo magni eaque suscipit. Debitis modi aliquam dolorem itaque, expedita deserunt enim inventore dolores fugit harum.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -388,6 +393,29 @@
     <!-- Put all script files here -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script> -->
+
+    <script>
+
+    $(window).scroll(function(){
+
+        $('section').each(function(){
+
+            var currentSection = $(this);
+
+            var topofDiv = currentSection.offset().top;
+            var height = currentSection.outerHeight();
+
+            if($(window).scrollTop() > (topofDiv - 400) && $(window).scrollTop() < (topofDiv + height)){
+               currentSection.addClass('show');
+            }
+            else{
+               currentSection.removeClass('show');
+            }
+
+        });
+
+    });
+    </script>
     <script src="js/scripts.js"></script>
 
     <!-- endbuild -->

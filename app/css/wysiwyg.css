@@ -713,7 +713,8 @@ blockquote {
   transition: all 0.3s ease; }
   .button:hover {
     border-color: #FFB7A8;
-    color: #FFB7A8; }
+    color: #FFB7A8;
+    background: rgba(255, 255, 255, 0.9); }
 
 /** Something only in wysiwyg */
 body {

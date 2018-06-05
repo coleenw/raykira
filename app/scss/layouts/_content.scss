@@ -2,21 +2,23 @@
  |----------------------------------------------------------------
  |  Site Page Content
  |----------------------------------------------------------------
- */
-.site-content {
-    @include padding-top(50, 30);
-    @include padding-bottom(50, 30);
-}
+*/
 
-/*
- |----------------------------------------------------------------
- |  Site Single Entry
- |----------------------------------------------------------------
- */
-.entry-content {
+section {
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
 
-}
+	.row {
+		transform: translateY(20px);
+		transition: all 0.4s ease-in-out;
+	}
 
-.entry-title {
+	&.show {
+		opacity: 1;
 
+		.row {
+			transform: none;
+			transition: all 0.7s ease-out;
+		}
+	}
 }
