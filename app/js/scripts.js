@@ -1,3 +1,5 @@
+console.log('%c Coleen built this shit ;)', 'background: #ffb7a8; color: #fff; font-size: 40px;');
+
 $('[data-scroll-to]').on('click', function(event) {
     event.preventDefault();
     var target = $('#' + $(this).data('scroll-to'));

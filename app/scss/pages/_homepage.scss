@@ -57,7 +57,7 @@ section {
 }
 
 .event-details {
-	margin: 0 auto;
+	// margin: 0 auto;
 
 	th, td {
 		vertical-align: top;
@@ -66,7 +66,7 @@ section {
 
 	th {
 		padding-right: 30px;
-		text-align: right;
+		text-align: left;
 		font-weight: normal;
 		font-size: 20px;
 	}
@@ -83,10 +83,11 @@ section {
 	padding-bottom: 0;
 
 	.friends {
-		@include margin-bottom(90, 50);
+		@include margin-bottom(50, 30);
 	}
 
 	.friend {
+		margin-bottom: 35px;
 		font-size: 18px;
 		line-height: 1;
 		filter: grayscale(1);
@@ -118,7 +119,7 @@ section {
 
 	.friend-featured {
 		display: inline-block;
-		margin: 45px auto 35px auto;
+		margin: 45px auto 0 auto;
 
 		.friend {
 			font-size: 20px;

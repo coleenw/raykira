@@ -1,18 +1,16 @@
 @media #{$below-desktop} {
     /*
-     |----------------------------------------------------------------
-     |  Enforce Column Stretching
-     |----------------------------------------------------------------
-     */
-    .tablet-stretch {
-        flex-basis: 12/12*100% !important;
-        max-width: 12/12*100% !important;
-        margin-right: auto !important;
-        margin-left: auto !important;
+    |----------------------------------------------------------------
+    |  About Us
+    |----------------------------------------------------------------
+    */
 
-        &._s {
-            flex-basis: 10/12*100% !important;
-            max-width: 10/12*100% !important;
+    #about-us {
+        background-size: auto 350px, auto 350px, auto;
+        background-position: left bottom, right bottom, center;
+
+        &.show {
+            background-position: left bottom, right bottom, center;
         }
     }
 

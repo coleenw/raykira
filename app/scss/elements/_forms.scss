@@ -22,6 +22,10 @@ form {
 
 }
 
+.gform_fields {
+	@include list-reset();
+}
+
 .gfield {
 	display: flex;
 	justify-content: space-between;

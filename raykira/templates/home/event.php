@@ -1,6 +1,6 @@
 <section id="event" <?php section_bg('event_section_background'); ?>>
-    <div class="row row-center">
-        <div class="columns-12 text-center">
+    <div class="row">
+        <div class="columns-10 right-2">
             <h2 class="section-heading"><?php the_field('event_section_title'); ?></h2>
             <h3 class="section-tagline"><?php the_field('event_address'); ?></h3>
     
